@@ -4,6 +4,8 @@ metadata:
   name: hello
   annotations:
     backstage.io/kubernetes-id: hello
+    prometheus.io/rule: sum by (instance) (node_cpu_seconds_total)
+    prometheus.io/alert: all
 spec:
   type: service
   lifecycle: experimental
