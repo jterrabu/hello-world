@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: opensift-examples
+  annotations:
+    backstage.io/kubernetes-id: opensift-examples
+    prometheus.io/rule: |
+      up|pod,
+      process_cpu_seconds_total|pod,
+      http_requests_total|pod
+    prometheus.io/alert: all
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/developer
