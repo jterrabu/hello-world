@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: opensift-examples
+  annotations:
+    backstage.io/kubernetes-id: opensift-examples
+    prometheus.io/alert: all
+    prometheus.io/rule: |
+      sum by (instance) (node_cpu_seconds_total)|instance
+    feedback/type: 'JIRA'
+    jira/project-key: "Developer Hub"
+    feedback/host: 'https://terrabuio.atlassian.net'
+    feedback/email-to: 'admin@mail.com'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/devops
