@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: developer-hub
+  description: Plataforma interna de desenvolvedores
+  tags:
+    - feedback
+    - portal
+spec:
+  type: website
+  lifecycle: production
+  owner: group:default/devops
