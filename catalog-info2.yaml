@@ -7,8 +7,13 @@ metadata:
     prometheus.io/rule: |
       sum by (instance) (node_cpu_seconds_total)|instance
     prometheus.io/alert: all
-    feedback/type: 'MAIL'
-    feedback/email-to: 'admin@mail.com'
+#    feedback/type: 'MAIL'
+#    feedback/email-to: 'admin@mail.com'
+    feedback/type: 'JIRA'
+    jira/project-key: 'Developr Hub'
+    feedback/host: 'https://terrabuio.atlassian.net'
+    feedback/email-to: 'admin@mail.com';
+    
 spec:
   type: service
   lifecycle: experimental
