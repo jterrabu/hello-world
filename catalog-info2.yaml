@@ -12,7 +12,7 @@ metadata:
     feedback/type: 'JIRA'
     jira/project-key: 'Developr Hub'
     feedback/host: 'https://terrabuio.atlassian.net'
-    feedback/email-to: 'admin@mail.com';
+    feedback/email-to: 'admin@mail.com'
     
 spec:
   type: service
