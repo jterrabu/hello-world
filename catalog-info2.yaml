@@ -8,7 +8,7 @@ metadata:
     prometheus.io/rule: |
       sum by (instance) (node_cpu_seconds_total)|instance
     feedback/type: 'JIRA'
-    jira/project-key: "Developer Hub"
+    jira/project-key: "KAN"
     feedback/host: 'https://terrabuio.atlassian.net'
     feedback/email-to: 'admin@mail.com'
 spec:
