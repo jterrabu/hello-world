@@ -7,6 +7,8 @@ metadata:
     prometheus.io/rule: |
       sum by (instance) (node_cpu_seconds_total)|instance
     prometheus.io/alert: all
+    feedback/type: 'MAIL'
+    feedback/email-to: 'admin@mail.com'
 spec:
   type: service
   lifecycle: experimental
