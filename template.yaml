@@ -1,0 +1,27 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: carregar-yaml-remoto
+spec:
+  parameters:
+    - title: Informações do YAML remoto
+      required: [url]
+      properties:
+        url:
+          type: string
+          description: URL completa do arquivo YAML
+
+  steps:
+    - id: fetch
+      name: Buscar YAML remoto
+      action: caixa:get-values-from-url
+      input:
+        url: ${{ parameters.url }}
+
+    - id: show
+      name: Mostrar variáveis
+      action: debug:log
+      input:
+        message: |
+          Valores carregados:
+          ${{ steps.fetch.output.variables }}
