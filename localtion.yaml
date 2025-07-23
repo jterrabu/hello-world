@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: software-templates
+  description: Uma coleção de templates de software para o Developer Hub
+spec:
+  type: url
+  targets:
+    - ./template.yaml
