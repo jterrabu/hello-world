@@ -6,4 +6,7 @@ metadata:
 spec:
   type: url
   targets:
-    - ./template.yaml
+    - ./catalog-info1.yaml
+    - ./catalog-info2.yaml
+    - ./catalog-info3.yaml
+    - ./teste-variaveis-dinamicas.yaml
