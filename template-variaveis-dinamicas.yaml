@@ -1,0 +1,55 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: teste-variaveis-dinamicas
+  title: Teste do DynamicYamlEditorField
+  description: Testa carregamento de variáveis de repositório remoto (GitHub ou Azure)
+spec:
+  owner: owner: group:default/devops
+  type: service
+
+  parameters:
+    - title: Repositório
+      required:
+        - host
+        - organizacao
+        - repositorio
+        - branch
+        - caminho
+        - variables
+      properties:
+        host:
+          type: string
+          title: Host
+          enum: [github.com, dev.azure.com]
+        organizacao:
+          type: string
+          title: Organização
+        repositorio:
+          type: string
+          title: Repositório (ou Projeto no Azure)
+        branch:
+          type: string
+          title: Branch
+        caminho:
+          type: string
+          title: Caminho do YAML
+        variables:
+          type: object
+          title: Variáveis carregadas
+          additionalProperties:
+            type: string
+          ui:field: DynamicYamlEditorField
+
+  steps:
+    - id: mostrar
+      name: Exibir variáveis carregadas
+      action: debug:log
+      input:
+        message: |
+          Variáveis carregadas do arquivo YAML:
+          ${{ parameters.variables }}
+
+  output:
+    text:
+      - 'Variáveis carregadas com sucesso! Veja no passo de log acima.'
