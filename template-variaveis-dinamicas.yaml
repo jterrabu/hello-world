@@ -5,7 +5,7 @@ metadata:
   title: Teste do DynamicYamlEditorField
   description: Testa carregamento de variáveis de repositório remoto (GitHub ou Azure)
 spec:
-  owner: owner: group:default/devops
+  owner: group:default/devops
   type: service
 
   parameters:
