@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: teste-variaveis-dinamicas
+  title: Teste do DynamicYamlEditorField
+spec:
+  path: ./template.yaml
+  type: service
+   owner: group:default/devops
