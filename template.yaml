@@ -48,4 +48,4 @@ spec:
       input:
         message: |
           Variáveis carregadas do arquivo YAML:
-          ${{ json.stringify(parameters.variables, null, 2) }}
+          ${{ parameters.variables | dump(2) }}
