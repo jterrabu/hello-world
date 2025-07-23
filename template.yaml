@@ -48,8 +48,4 @@ spec:
       input:
         message: |
           Variáveis carregadas do arquivo YAML:
-          ${{ parameters.variables }}
-
-  output:
-    text:
-      - 'Variáveis carregadas com sucesso! Veja no passo de log acima.'
+          ${{ json.stringify(parameters.variables, null, 2) }}
